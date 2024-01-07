@@ -38,8 +38,15 @@ EMAIL: cravottb@uci.edu
 
         h3 {
             color: #B0A1C0;
-            font-size: 25px;
+            font-size: 26px;
             margin-bottom: -5px;
+        }
+
+        h4 {
+            color: #B0A1C0;
+            font-size: 21px;
+            margin-top: 2px;
+            margin-bottom: -2px;
         }
 
         ul {
@@ -70,11 +77,22 @@ EMAIL: cravottb@uci.edu
             scroll-margin-top: 50px;
         }
 
-        .gridcontainer {
+        .description-grid {
+            display: flex;
+            justify-content: center;
+        }
+
+        .description {
+            margin-top: 7px;
+            margin-left: 4.5px;
+            margin-right: 4.5px;
+        }
+
+        .games-grid {
             display: flex;
             align-items: center;
             justify-content: center;
-            padding-bottom: 30px;
+            padding-top: 20px;
         }
 
         .game {
@@ -107,6 +125,7 @@ EMAIL: cravottb@uci.edu
             transition: .5s ease;
             overflow: hidden;
             opacity: 0.85;
+            font-weight: bold;
         }
         .game:hover .overlay {height: 100%;}
 
@@ -114,7 +133,7 @@ EMAIL: cravottb@uci.edu
             display: flex;
             justify-content: center;
             align-items: center;
-            padding-top: 25px;
+            padding-top: 20px;
         }
 
         .gameplay-img {
@@ -220,8 +239,7 @@ EMAIL: cravottb@uci.edu
         <div id="UI-UX" class="tabcontent">
             <h3>UI / UX</h3>
             <p>
-                [brief overview text describing UI/UX stuff]
-                <br />
+                I enjoy doing UI/UX work on video games, both front-end and back-end. Here are some highlights of my UI/UX work:
             </p>
 
             <div class="gameplay">
@@ -250,8 +268,7 @@ EMAIL: cravottb@uci.edu
         <div id="Mechanics" class="tabcontent">
             <h3>Gameplay Mechanics</h3>
             <p>
-                [brief overview text describing Gameplay Mechanics stuff]
-                <br />
+                I love programming gameplay mechanics and features when developing a video game. Here are some of my favorite gameplay mechanics I've worked on:
             </p>
 
             <div class="gameplay">
@@ -279,9 +296,11 @@ EMAIL: cravottb@uci.edu
 
         <div id="Games" class="tabcontent">
             <h3>Games</h3>
-            <p>I've worked on several different games in Unity so far, below are links to some of my favorites.</p>
+            <p>
+                I've worked on several different games in Unity so far, below are links to some of my favorites:
+            </p>
 
-            <div class="gridcontainer">
+            <div class="games-grid">
                 <div class="game">
                     <a target="_blank" href="https://madjuse.itch.io/spring-scaffold-2022">
                         <img class="game-img" src="Assets/AcornQuest.png" alt="AcornQuest video game">
@@ -310,13 +329,35 @@ EMAIL: cravottb@uci.edu
                 </div>
 
                 <!--<div class="game">
-                <a target="_blank" href="https://baconbc.itch.io/materialism-attacks">
-                    <img class="game-img" src="Assets/MaterialismAttacks!.png" alt="Materialism Attacks! video game">
-                    <div class="overlay">
-                        <div class="game-text">Materialism Attacks!</div>
-                    </div>
-                </a>
-            </div>-->
+            <a target="_blank" href="https://baconbc.itch.io/materialism-attacks">
+                <img class="game-img" src="Assets/MaterialismAttacks!.png" alt="Materialism Attacks! video game">
+                <div class="overlay">
+                    <div class="game-text">Materialism Attacks!</div>
+                </div>
+            </a>
+        </div>-->
+            </div>
+            <div class="description-grid">
+                <div class="game">
+                    <h4>AcornQuest</h4>
+                    <p class="description">
+                        AcornQuest is a 2D platformer game where players try to complete levels through solving puzzles, collecting materials to craft items, and completing jumping challenges, all while evading enemies!
+                    </p>
+                </div>
+
+                <div class="game">
+                    <h4>Distant Treasures</h4>
+                    <p class="description">
+                        Distant Treasures is a 2D story-driven adventure game where players wake up in a mysterious room where they must interact with the environment and solve puzzles to try and escape.
+                    </p>
+                </div>
+
+                <div class="game">
+                    <h4>Missed Harvest</h4>
+                    <p class="description">
+                        Missed Harvest is a 3D co-op 2-player platformer game where players play as a chicken trying to escape the farm by using items, solving puzzles, and shooting enemies with an egg gun!
+                    </p>
+                </div>
             </div>
         </div>
     </section>
