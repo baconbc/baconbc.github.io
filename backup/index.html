@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+
+<!--
+WRITTEN BY: Brooke Cravotta
+EMAIL: cravottb@uci.edu
+-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Brooke Cravotta self portrait">
+    <meta name="description" content="my online portfolio">
+
+    <title>Brooke's Portfolio</title>
+
+    <style>
+        body {
+            background-color: #3a2a61;
+            color: #A595B7;
+            padding-left: 10%;
+            padding-right: 10%;
+            font-family: Helvetica;
+            text-align: center;
+        }
+
+        p {
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+        
+        h1 {
+            color: #B0A1C0;
+            font-family: 'Lucida Handwriting';
+            font-size: 75px;
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            color: #B0A1C0;
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            color: #B0A1C0;
+            font-size: 26px;
+            margin-bottom: -5px;
+        }
+
+        h4 {
+            color: #B0A1C0;
+            font-size: 21px;
+            margin-top: 2px;
+            margin-bottom: -2px;
+        }
+
+        ul {
+            background-color: #599bae;
+            margin: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            list-style-type: none;
+            overflow: hidden;
+        }
+
+        li a {
+            float: left;
+            color: #BEE0EA;
+            display: block;
+            padding: 15px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #397F93;
+        }
+
+        /* used to account for scrollbar at the top when jumping to a section using the navbar */
+        .anchor {
+            scroll-margin-top: 50px;
+        }
+        
+        .description-grid {
+            display: flex;
+            justify-content: center;
+        }
+
+        .description {
+            margin-top: 7px;
+            margin-left: 4.5px;
+            margin-right: 4.5px;
+        }
+
+        .games-grid {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 20px;
+        }
+
+        .game {
+            position: relative;
+            float: left;
+            width: 30%;
+            min-width: 120px;
+        }
+
+        .game-img {
+            display: inline-block;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .game-text {
+            color: #29373D;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+        }
+
+        .overlay {
+            background-color: #60AABE;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 0;
+            transition: .5s ease;
+            overflow: hidden;
+            opacity: 0.85;
+            font-weight: bold;
+        }
+        .game:hover .overlay {height: 100%;}
+
+        .gameplay {
+            padding-top: 20px;
+        }
+
+        .gameplay-img {
+            width: 75%;
+            max-width: 400px;
+        }
+
+        .gameplay-text {
+            margin-top: 0px;
+            text-align: center;
+            width: 70%;
+            max-width: 400px;
+        }
+
+        /* Style the tab */
+        .tab {
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #A595B7;
+            border-bottom: none;
+            background-color: #A595B7;
+            color: #3a2a61;
+        }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+            background-color: inherit;
+            color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: #755f99; /*#d1c8db;*/
+        }
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+            background-color: #523c78; /*#c0b0d1;*/
+            color: #A595B7;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 6px 12px;
+            border: 3px solid #A595B7;
+            background-color: #523c78;
+            border-top: none;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Intro</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#exp">Experience</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h1>Brooke Cravotta</h1>
+        <img src="Assets/ProfilePic.png" style="width: 30%; min-width: 300px;" alt="Brooke Cravotta self portrait">
+        <p>Hi I'm Brooke, and I'm a video game developer. I have experience in programming and UI/UX.</p>
+    </section>
+
+    <section id="about" class="anchor">
+        <hr>
+        <h2>About Me</h2>
+        <p>
+            I'm a 4th year Computer Game Science major at University of California, Irvine.
+            I have been creating video games since 2018 and have developed 9 video games so far and 2 tabletop games.
+            I am part of UCI's Video Game Development Club (VGDC) and have created several games within the club, some of which I was a team lead.
+            I am currently working on an ambitious 10th video game in a team of 5 as part of my senior Capstone project with a mentor from Blizzard.
+            <br />
+            <br />
+            The game engines I use are Unity (C#) and Godot.
+            <br />
+            The programming languages I primarily use are C++, C#, Java, JavaScript, Python, and HTML/CSS.
+            <br />
+            Some additional software I am proficient in are Office 365, Git, and Adobe Creative Cloud (Illustrator, Lightroom, Photoshop, Premiere Pro), and Blender.
+        </p>
+    </section>
+
+    <section id="exp" class="anchor">
+        <hr>
+        <h2>Experience</h2>
+
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'UI-UX')" id="defaultOpen">UI / UX</button>
+            <button class="tablinks" onclick="openTab(event, 'Mechanics')">Gameplay Mechanics</button>
+            <button class="tablinks" onclick="openTab(event, 'Games')">Games</button>
+        </div>
+
+
+        <!--UI-UX Section-->
+        <div id="UI-UX" class="tabcontent">
+            <h3>UI / UX</h3>
+            <p>
+                I enjoy doing UI/UX work on video games, both front-end and back-end.
+                Here are some highlights of my UI/UX work:
+            </p>
+
+            <div class="gameplay">
+                <img class="gameplay-img" src="Assets/CraftingMechanic.gif" alt="Inventory and Crafting System">
+                <p class="gameplay-text">
+                    [Describe crafting system mechanic]
+                </p>
+            </div>
+
+            <div class="gameplay">
+                <img class="gameplay-img" src="Assets/Notes.gif" alt="Note Interface">
+                <p class="gameplay-text">
+                    [Describe note mechanic]
+                </p>
+            </div>
+
+            <div class="gameplay">
+                <img class="gameplay-img" src="Assets/Hero'sParry.gif" alt="Main Menu">
+                <p class="gameplay-text">
+                    [Describe main menu]
+                </p>
+            </div>
+
+            <div class="gameplay">
+                <img class="gameplay-img" src="Assets/MissedHarvest.gif" alt="Settings Menu">
+                <p class="gameplay-text">
+                    [Describe chicken game mechanic]
+                </p>
+            </div>
+        </div>
+
+
+        <!--Gameplay Mechanics Section-->
+        <div id="Mechanics" class="tabcontent">
+            <h3>Gameplay Mechanics</h3>
+            <p>
+                I love programming gameplay mechanics and features when developing a video game.
+                Here are some of my favorite gameplay mechanics I've worked on:
+            </p>
+
+            <div class="gameplay">
+                <img class="gameplay-img" src="Assets/BossMechanics.gif" alt="Boss fighting mechanics">
+                <p class="gameplay-text">
+                    This clip showcases the boss Treevil from my latest game Island Boy.
+                    I programmed the boss attacks, created the sprites, and worked on the boss summoning mechanic.
+                </p>
+            </div>
+
+            <div class="gameplay">
+                <img class="gameplay-img" src="Assets/Fishing.gif" alt="Fishing mechanic">
+                <p class="gameplay-text">
+                    [Describe fishing mechanic]
+                </p>
+            </div>
+
+            <div class="gameplay">
+                <img class="gameplay-img" src="Assets/PlantGrowthMechanic.gif" alt="Plant growing mechanics">
+                <p class="gameplay-text">
+                    [Describe plant growing mechanic]
+                </p>
+            </div>
+
+            <div class="gameplay">
+                <img class="gameplay-img" src="Assets/MoneyGun.gif" alt="Money gun mechanic">
+                <p class="gameplay-text">
+                    [Describe money gun mechanic]
+                </p>
+            </div>
+        </div>
+
+
+        <!--Games Section-->
+        <div id="Games" class="tabcontent">
+            <h3>Games</h3>
+            <p>
+                I've worked on several different games in Unity so far, below are links to some of my favorites:
+            </p>
+
+            <div class="games-grid">
+                <div class="game">
+                    <a target="_blank" href="https://jalagon.itch.io/craftaway">
+                        <img class="game-img" src="Assets/CraftAway.png" alt="CraftAway video game">
+                        <div class="overlay">
+                            <div class="game-text">CraftAway</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="game">
+                    <a target="_blank" href="https://madjuse.itch.io/spring-scaffold-2022">
+                        <img class="game-img" src="Assets/AcornQuest.png" alt="AcornQuest video game">
+                        <div class="overlay">
+                            <div class="game-text">AcornQuest</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="description-grid">
+                <div class="game">
+                    <h4>CraftAway</h4>
+                    <p class="description">
+                        [CraftAway]
+                    </p>
+                </div>
+
+                <div class="game">
+                    <h4>AcornQuest</h4>
+                    <p class="description">
+                        AcornQuest is a 2D platformer game where players try to complete levels through solving puzzles, collecting materials to craft items, and completing jumping challenges, all while evading enemies!
+                    </p>
+                </div>
+            </div>
+
+
+
+
+            <div class="games-grid">
+                <div class="game">
+                    <a target="_blank" href="https://quetzde6th.itch.io/distant-treasures">
+                        <img class="game-img" src="Assets/DistantTreasures.png" alt="Distant Treasures video game">
+                        <div class="overlay">
+                            <div class="game-text">Distant Treasures</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="game">
+                    <a target="_blank" href="https://itch.io/queue/c/2558455/my-games?game_id=2119927">
+                        <img class="game-img" src="Assets/MissedHarvest.png" alt="Missed Harvest video game">
+                        <div class="overlay">
+                            <div class="game-text">Missed Harvest</div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+            <div class="description-grid">
+                <div class="game">
+                    <h4>Distant Treasures</h4>
+                    <p class="description">
+                        Distant Treasures is a 2D story-driven adventure game where players wake up in a mysterious room where they must interact with the environment and solve puzzles to try and escape.
+                    </p>
+                </div>
+
+                <div class="game">
+                    <h4>Missed Harvest</h4>
+                    <p class="description">
+                        Missed Harvest is a 3D co-op 2-player platformer game where players play as a chicken trying to escape the farm by using items, solving puzzles, and shooting enemies with an egg gun!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function openTab(evt, tabName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(tabName).style.display = "flex";
+          evt.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+
+</body>
+
+    </html>

@@ -24,31 +24,31 @@ EMAIL: cravottb@uci.edu
         }
 
         p {
-            margin-left: 10%;
-            margin-right: 10%;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+
+        a {
+            text-decoration: none;
         }
         
         h1 {
-            color: #B0A1C0;
             font-family: 'Lucida Handwriting';
             font-size: 75px;
             margin-bottom: 25px;
         }
 
         h2 {
-            color: #B0A1C0;
             font-size: 35px;
             margin-bottom: 15px;
         }
 
         h3 {
-            color: #B0A1C0;
             font-size: 26px;
             margin-bottom: -5px;
         }
 
         h4 {
-            color: #B0A1C0;
             font-size: 21px;
             margin-top: 2px;
             margin-bottom: -2px;
@@ -81,11 +81,6 @@ EMAIL: cravottb@uci.edu
         .anchor {
             scroll-margin-top: 50px;
         }
-
-        .main-text {
-            max-width: 500px;
-            min-width: 300px;
-        }
         
         .description-grid {
             display: flex;
@@ -98,34 +93,7 @@ EMAIL: cravottb@uci.edu
             margin-right: 4.5px;
         }
 
-        .games-grid {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding-top: 20px;
-        }
-
-        .game {
-            position: relative;
-            float: left;
-            width: 30%;
-            min-width: 120px;
-        }
-
-        .game-img {
-            display: inline-block;
-            width: 100%;
-        }
-
-        .game-text {
-            color: #29373D;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 20px;
-        }
-
+        /*
         .overlay {
             background-color: #60AABE;
             position: absolute;
@@ -137,13 +105,53 @@ EMAIL: cravottb@uci.edu
             opacity: 0.85;
             font-weight: bold;
         }
-        .game:hover .overlay {height: 100%;}
+        .game:hover .overlay {height: 100%;}*/
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-rows: minmax(100px, auto);
+            column-gap: 20px;
+            row-gap: 40px;
+            max-width: 800px;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 100%;
+            border-radius: 5px;
+            background-color: #A595B7;
+            color: #551a8b;
+            text-align: left;
+
+        }
+
+        .card-clickable:hover {
+            box-shadow: 0 16px 24px 0 rgba(0,0,0,0.5);
+        }
+
+        .card-img {
+            border-radius: 5px 5px 0 0;
+        }
+
+        .card-container {
+            padding: 10px 20px;
+        }
+
+        .card-container p {
+            margin-left: 0%;
+            margin-right: 0%;
+        }
+
+        .card-info {
+            color: #837192;
+        }
 
         .gameplay {
-            display: flex;
-            justify-content: center;
-            align-items: center;
             padding-top: 20px;
+            width: 40%;
+            min-width: 300px;
         }
 
         .gameplay-img {
@@ -152,7 +160,8 @@ EMAIL: cravottb@uci.edu
         }
 
         .gameplay-text {
-            margin-top: -14px;
+            margin-top: 0px;
+            text-align: center;
             width: 70%;
             max-width: 400px;
         }
@@ -189,18 +198,21 @@ EMAIL: cravottb@uci.edu
         }
 
         /* Create an active/current tablink class */
-            .tab button.active {
-                background-color: #523c78; /*#c0b0d1;*/
-                color: #A595B7;
-            }
+        .tab button.active {
+            background-color: #523c78; /*#c0b0d1;*/
+            color: #A595B7;
+        }
 
         /* Style the tab content */
         .tabcontent {
-            display: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             padding: 6px 12px;
             border: 3px solid #A595B7;
             background-color: #523c78;
             border-top: none;
+            flex-direction: column;
         }
     </style>
 </head>
@@ -248,50 +260,62 @@ EMAIL: cravottb@uci.edu
             <button class="tablinks" onclick="openTab(event, 'Games')">Games</button>
         </div>
 
+
+        <!--UI-UX Section-->
         <div id="UI-UX" class="tabcontent">
             <h3>UI / UX</h3>
-            <p class="main-text">
-                I enjoy doing UI/UX work on video games, both front-end and back-end. 
+            <p>
+                I enjoy doing UI/UX work on video games, both front-end and back-end.
                 Here are some highlights of my UI/UX work:
             </p>
 
             <div class="gameplay">
-                <img class="gameplay-img" src="Assets/CraftingMechanic.gif" alt="Inventory and Crafting System">
-            </div>
-            <div class="gameplay">
-                <p class="gameplay-text">
-                    [Describe crafting system mechanic]
-                </p>
-            </div>
-
-            <div class="gameplay">
-                <img class="gameplay-img" src="Assets/Notes.gif" alt="Note Interface">
-            </div>
-            <div class="gameplay">
-                <p class="gameplay-text">
-                    [Describe note mechanic]
-                </p>
+                <div class="card">
+                    <img class="card-img" src="Assets/CraftingMechanic.gif" alt="Inventory and Crafting System" style="width:100%">
+                    <div class="card-container">
+                        <p>
+                            [Describe crafting system mechanic]
+                        </p>
+                    </div>
+                </div>
             </div>
 
             <div class="gameplay">
-                <img class="gameplay-img" src="Assets/Hero'sParry.gif" alt="Main Menu">
-            </div>
-            <div class="gameplay">
-                <p class="gameplay-text">
-                    [Describe main menu]
-                </p>
+                <div class="card">
+                    <img class="card-img" src="Assets/Notes.gif" alt="Note Interface" style="width:100%">
+                    <div class="card-container">
+                        <p>
+                            [Describe note mechanic]
+                        </p>
+                    </div>
+                </div>
             </div>
 
             <div class="gameplay">
-                <img class="gameplay-img" src="Assets/MissedHarvest.gif" alt="Settings Menu">
+                <div class="card">
+                    <img class="card-img" src="Assets/Hero'sParry.gif" alt="Main Menu" style="width:100%">
+                    <div class="card-container">
+                        <p>
+                            [Describe main menu]
+                        </p>
+                    </div>
+                </div>
             </div>
+
             <div class="gameplay">
-                <p class="gameplay-text">
-                    [Describe chicken game mechanic]
-                </p>
+                <div class="card">
+                    <img class="card-img" src="Assets/MissedHarvest.gif" alt="Settings Menu" style="width:100%">
+                    <div class="card-container">
+                        <p>
+                            [Describe chicken game mechanic]
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
 
+
+        <!--Gameplay Mechanics Section-->
         <div id="Mechanics" class="tabcontent">
             <h3>Gameplay Mechanics</h3>
             <p>
@@ -300,130 +324,159 @@ EMAIL: cravottb@uci.edu
             </p>
 
             <div class="gameplay">
-                <img class="gameplay-img" src="Assets/BossMechanics.gif" alt="Boss fighting mechanics">
-            </div>
-            <div class="gameplay">
-                <p class="gameplay-text">
-                    This clip showcases the boss Treevil from my latest game Island Boy.
-                    I programmed the boss attacks, created the sprites, and worked on the boss summoning mechanic.
-                </p>
-            </div>
-
-            <div class="gameplay">
-                <img class="gameplay-img" src="Assets/Fishing.gif" alt="Fishing mechanic">
-            </div>
-            <div class="gameplay">
-                <p class="gameplay-text">
-                    [Describe fishing mechanic]
-                </p>
+                <div class="card">
+                    <img class="card-img" src="Assets/BossMechanics.gif" alt="Boss fighting mechanics" style="width:100%">
+                    <div class="card-container">
+                        <p>
+                            This clip showcases the boss Treevil from my latest game Island Boy.
+                            I programmed the boss attacks, created the sprites, and worked on the boss summoning mechanic.
+                        </p>
+                    </div>
+                </div>
             </div>
 
             <div class="gameplay">
-                <img class="gameplay-img" src="Assets/PlantGrowthMechanic.gif" alt="Plant growing mechanics">
-            </div>
-            <div class="gameplay">
-                <p class="gameplay-text">
-                    [Describe plant growing mechanic]
-                </p>
+                <div class="card">
+                    <img class="card-img" src="Assets/Fishing.gif" alt="Fishing mechanic" style="width:100%">
+                    <div class="card-container">
+                        <p>
+                            [Describe fishing mechanic]
+                        </p>
+                    </div>
+                </div>
             </div>
 
             <div class="gameplay">
-                <img class="gameplay-img" src="Assets/MoneyGun.gif" alt="Money gun mechanic">
+                <div class="card">
+                    <img class="card-img" src="Assets/PlantGrowthMechanic.gif" alt="Plant growing mechanics" style="width:100%">
+                    <div class="card-container">
+                        <p>
+                            [Describe Plant growing mechanic]
+                        </p>
+                    </div>
+                </div>
             </div>
+
             <div class="gameplay">
-                <p class="gameplay-text">
-                    [Describe money gun mechanic]
-                </p>
+                <div class="card">
+                    <img class="card-img" src="Assets/MoneyGun.gif" alt="Money gun mechanics" style="width:100%">
+                    <div class="card-container">
+                        <p>
+                            [Describe Money gun mechanic]
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
 
+
+        <!--Games Section-->
         <div id="Games" class="tabcontent">
             <h3>Games</h3>
             <p>
-                I've worked on several different games in Unity so far, below are links to some of my favorites:
+                I've worked on several different games so far, below are links to some of my favorites:
             </p>
 
             <div class="games-grid">
-                <div class="game">
+                <div class="card card-clickable">
                     <a target="_blank" href="https://jalagon.itch.io/craftaway">
-                        <img class="game-img" src="Assets/CraftAway.png" alt="CraftAway video game">
-                        <div class="overlay">
-                            <div class="game-text">CraftAway</div>
+                        <img class="card-img" src="Assets/CraftAway.png" alt="CraftAway video game" style="width:100%">
+                        <div class="card-container">
+                            <h4><b>CraftAway</b><span class="card-info" style="float: right; font-size: 16px; font-weight: normal;">2024</span></h4>
+                            <p>
+                                [CraftAway]
+                            </p>
+                            <div class="card-info">
+                                <hr style="border-style: solid" />
+                                <p>Unity | Programmer | UI/UX | Pixel Artist</p>
+                            </div>
                         </div>
                     </a>
                 </div>
 
-                <div class="game">
+                <div class="card card-clickable">
                     <a target="_blank" href="https://madjuse.itch.io/spring-scaffold-2022">
-                        <img class="game-img" src="Assets/AcornQuest.png" alt="AcornQuest video game">
-                        <div class="overlay">
-                            <div class="game-text">AcornQuest</div>
+                        <img class="card-img" src="Assets/AcornQuest.png" alt="AcornQuest video game" style="width:100%">
+                        <div class="card-container">
+                            <h4><b>AcornQuest</b><span class="card-info" style="float: right; font-size: 16px; font-weight: normal;">2022</span></h4>
+                            <p>
+                                AcornQuest is a 2D platformer game where players try to complete levels through solving puzzles,
+                                collecting materials to craft items, and completing jumping challenges, all while evading enemies!
+                            </p>
+                            <div class="card-info">
+                                <hr style="border-style: solid" />
+                                <p>Unity | Team Lead | Programmer | UI/UX</p>
+                            </div>
                         </div>
                     </a>
                 </div>
-                <!--<div class="game">
-            <a target="_blank" href="https://baconbc.itch.io/materialism-attacks">
-                <img class="game-img" src="Assets/MaterialismAttacks!.png" alt="Materialism Attacks! video game">
-                <div class="overlay">
-                    <div class="game-text">Materialism Attacks!</div>
-                </div>
-            </a>
-        </div>-->
-            </div>
-            <div class="description-grid">
-                <div class="game">
-                    <h4>CraftAway</h4>
-                    <p class="description">
-                        [CraftAway]
-                    </p>
-                </div>
 
-                <div class="game">
-                    <h4>AcornQuest</h4>
-                    <p class="description">
-                        AcornQuest is a 2D platformer game where players try to complete levels through solving puzzles, collecting materials to craft items, and completing jumping challenges, all while evading enemies!
-                    </p>
-                </div>
-            </div>
-
-
-
-
-            <div class="games-grid">
-                <div class="game">
+                <div class="card card-clickable">
                     <a target="_blank" href="https://quetzde6th.itch.io/distant-treasures">
-                        <img class="game-img" src="Assets/DistantTreasures.png" alt="Distant Treasures video game">
-                        <div class="overlay">
-                            <div class="game-text">Distant Treasures</div>
+                        <img class="card-img" src="Assets/DistantTreasures.png" alt="Distant Treasures video game" style="width:100%">
+                        <div class="card-container">
+                            <h4><b>Distant Treasures</b><span class="card-info" style="float: right; font-size: 16px; font-weight: normal;">2022</span></h4>
+                            <p>
+                                Distant Treasures is a 2D story-driven adventure game where players wake up in a mysterious room
+                                where they must interact with the environment and solve puzzles to try and escape.
+                            </p>
+                            <div class="card-info">
+                                <hr style="border-style: solid" />
+                                <p>Unity | Programmer | UI/UX</p>
+                            </div>
                         </div>
                     </a>
                 </div>
 
-                <div class="game">
+                <div class="card card-clickable">
                     <a target="_blank" href="https://itch.io/queue/c/2558455/my-games?game_id=2119927">
-                        <img class="game-img" src="Assets/MissedHarvest.png" alt="Missed Harvest video game">
-                        <div class="overlay">
-                            <div class="game-text">Missed Harvest</div>
+                        <img class="card-img" src="Assets/MissedHarvest.png" alt="Missed Harvest video game" style="width:100%">
+                        <div class="card-container">
+                            <h4><b>Missed Harvest</b><span class="card-info" style="float: right; font-size: 16px; font-weight: normal;">2023</span></h4>
+                            <p>
+                                Missed Harvest is a 3D co-op 2-player platformer game where players play as a chicken
+                                trying to escape the farm by using items, solving puzzles, and shooting enemies with an egg gun!
+                            </p>
+                            <div class="card-info">
+                                <hr style="border-style: solid" />
+                                <p>Unity | Programmer | UI/UX</p>
+                            </div>
                         </div>
                     </a>
                 </div>
-
             </div>
+            <!--<div class="game">
+        <a target="_blank" href="https://jalagon.itch.io/craftaway">
+            <img class="game-img" src="Assets/CraftAway.png" alt="CraftAway video game">
+            <div class="overlay">
+                <div class="game-text">CraftAway</div>
+            </div>
+        </a>
+    </div>
+
+    <div class="game">
+        <a target="_blank" href="https://madjuse.itch.io/spring-scaffold-2022">
+            <img class="game-img" src="Assets/AcornQuest.png" alt="AcornQuest video game">
+            <div class="overlay">
+                <div class="game-text">AcornQuest</div>
+            </div>
+        </a>
+    </div>
             <div class="description-grid">
-                <div class="game">
-                    <h4>Distant Treasures</h4>
-                    <p class="description">
-                        Distant Treasures is a 2D story-driven adventure game where players wake up in a mysterious room where they must interact with the environment and solve puzzles to try and escape.
-                    </p>
-                </div>
+        <div class="game">
+            <h4>CraftAway</h4>
+            <p class="description">
+                [CraftAway]
+            </p>
+        </div>
 
-                <div class="game">
-                    <h4>Missed Harvest</h4>
-                    <p class="description">
-                        Missed Harvest is a 3D co-op 2-player platformer game where players play as a chicken trying to escape the farm by using items, solving puzzles, and shooting enemies with an egg gun!
-                    </p>
-                </div>
-            </div>
+        <div class="game">
+            <h4>AcornQuest</h4>
+            <p class="description">
+                AcornQuest is a 2D platformer game where players try to complete levels through solving puzzles, collecting materials to craft items, and completing jumping challenges, all while evading enemies!
+            </p>
+        </div>
+    </div>-->
         </div>
     </section>
 
@@ -438,7 +491,7 @@ EMAIL: cravottb@uci.edu
           for (i = 0; i < tablinks.length; i++) {
             tablinks[i].className = tablinks[i].className.replace(" active", "");
           }
-          document.getElementById(tabName).style.display = "block";
+          document.getElementById(tabName).style.display = "flex";
           evt.currentTarget.className += " active";
         }
 
