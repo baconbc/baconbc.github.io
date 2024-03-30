@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+
+<!--
+WRITTEN BY: Brooke Cravotta
+EMAIL: cravottb@uci.edu
+-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Brooke Cravotta self portrait">
+    <meta name="description" content="my online portfolio">
+    <title>Brooke's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Intro</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#exp">Experience</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h1>Brooke Cravotta</h1>
+        <img src="Assets/ProfilePic.png" style="width: 30%; min-width: 300px;" alt="Brooke Cravotta self portrait">
+        <p>Hi I'm Brooke, and I'm a video game developer. I have experience in programming and UI/UX.</p>
+    </section>
+
+    <section id="about" class="anchor">
+        <hr>
+        <h2>About Me</h2>
+        <p>
+            I'm a 4th year Computer Game Science major at University of California, Irvine.
+            I have been creating video games since 2018 and have developed 9 video games so far and 2 tabletop games.
+            I am part of UCI's Video Game Development Club (VGDC) and have created several games within the club, some of which I was a team lead.
+            I am currently working on an ambitious 10th video game in a team of 5 as part of my senior Capstone project with a mentor from Blizzard.
+            <br />
+            <br />
+            The game engines I use are Unity (C#) and Godot.
+            <br />
+            The programming languages I primarily use are C++, C#, Java, JavaScript, Python, and HTML/CSS.
+            <br />
+            Some additional software I am proficient in are Office 365, Git, and Adobe Creative Cloud (Illustrator, Lightroom, Photoshop, Premiere Pro), and Blender.
+        </p>
+    </section>
+
+    <section id="exp" class="anchor">
+        <hr>
+        <h2>Experience</h2>
+
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'UI-UX')" id="defaultOpen">UI / UX</button>
+            <button class="tablinks" onclick="openTab(event, 'Mechanics')">Gameplay Mechanics</button>
+            <button class="tablinks" onclick="openTab(event, 'Games')">Games</button>
+        </div>
+
+
+        <!--UI-UX Section-->
+        <div id="UI-UX" class="tabcontent">
+            <h3>UI / UX</h3>
+            <p>
+                I enjoy doing UI/UX work on video games, both front-end and back-end.
+                Here are some highlights of my UI/UX work:
+            </p>
+
+            <div class="gameplay">
+                <div class="card">
+                    <img class="card-img" src="Assets/CraftingMechanic.gif" alt="Inventory and Crafting System" style="width:100%">
+                    <div class="card-container">
+                        <p>
+                            [Describe crafting system mechanic]
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gameplay">
+                <div class="card">
+                    <img class="card-img" src="Assets/Notes.gif" alt="Note Interface" style="width:100%">
+                    <div class="card-container">
+                        <p>
+                            [Describe note mechanic]
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gameplay">
+                <div class="card">
+                    <img class="card-img" src="Assets/Hero'sParry.gif" alt="Main Menu" style="width:100%">
+                    <div class="card-container">
+                        <p>
+                            [Describe main menu]
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gameplay">
+                <div class="card">
+                    <img class="card-img" src="Assets/MissedHarvest.gif" alt="Settings Menu" style="width:100%">
+                    <div class="card-container">
+                        <p>
+                            [Describe chicken game mechanic]
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Gameplay Mechanics Section-->
+        <div id="Mechanics" class="tabcontent">
+            <h3>Gameplay Mechanics</h3>
+            <p>
+                I love programming gameplay mechanics and features when developing a video game.
+                Here are some of my favorite gameplay mechanics I've worked on:
+            </p>
+
+            <div class="gameplay">
+                <div class="card">
+                    <img class="card-img" src="Assets/BossMechanics.gif" alt="Boss fighting mechanics" style="width:100%">
+                    <div class="card-container">
+                        <p>
+                            This clip showcases the boss Treevil from my latest game Island Boy.
+                            I programmed the boss attacks, created the sprites, and worked on the boss summoning mechanic.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gameplay">
+                <div class="card">
+                    <img class="card-img" src="Assets/Fishing.gif" alt="Fishing mechanic" style="width:100%">
+                    <div class="card-container">
+                        <p>
+                            [Describe fishing mechanic]
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gameplay">
+                <div class="card">
+                    <img class="card-img" src="Assets/PlantGrowthMechanic.gif" alt="Plant growing mechanics" style="width:100%">
+                    <div class="card-container">
+                        <p>
+                            [Describe Plant growing mechanic]
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gameplay">
+                <div class="card">
+                    <img class="card-img" src="Assets/MoneyGun.gif" alt="Money gun mechanics" style="width:100%">
+                    <div class="card-container">
+                        <p>
+                            [Describe Money gun mechanic]
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Games Section-->
+        <div id="Games" class="tabcontent">
+            <h3>Games</h3>
+            <p>
+                I've worked on several different games so far, below are links to some of my favorites:
+            </p>
+
+            <div class="games-grid">
+                <object type="text/html" data="game-card-template.html" id="game-card-template" style="display:none;"></object>
+                <!--<div class="card card-clickable">
+        <img class="card-img" src="Assets/CraftAway.png" alt="CraftAway video game" style="width:100%">
+        <div class="card-container">
+            <h4><b>CraftAway</b><span class="card-info" style="float: right; font-size: 16px; font-weight: normal;">2024</span></h4>
+            <p>
+                [CraftAway]
+            </p>
+            <div class="card-info">
+                <hr style="border-style: solid" />
+                <p>Unity | Programmer | UI/UX | Pixel Artist</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card card-clickable">
+        <a target="_blank" href="https://madjuse.itch.io/spring-scaffold-2022">
+            <img class="card-img" src="Assets/AcornQuest.png" alt="AcornQuest video game" style="width:100%">
+            <div class="card-container">
+                <h4><b>AcornQuest</b><span class="card-info" style="float: right; font-size: 16px; font-weight: normal;">2022</span></h4>
+                <p>
+                    AcornQuest is a 2D platformer game where players try to complete levels through solving puzzles,
+                    collecting materials to craft items, and completing jumping challenges, all while evading enemies!
+                </p>
+                <div class="card-info">
+                    <hr style="border-style: solid" />
+                    <p>Unity | Team Lead | Programmer | UI/UX</p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="card card-clickable">
+        <a target="_blank" href="https://quetzde6th.itch.io/distant-treasures">
+            <img class="card-img" src="Assets/DistantTreasures.png" alt="Distant Treasures video game" style="width:100%">
+            <div class="card-container">
+                <h4><b>Distant Treasures</b><span class="card-info" style="float: right; font-size: 16px; font-weight: normal;">2022</span></h4>
+                <p>
+                    Distant Treasures is a 2D story-driven adventure game where players wake up in a mysterious room
+                    where they must interact with the environment and solve puzzles to try and escape.
+                </p>
+                <div class="card-info">
+                    <hr style="border-style: solid" />
+                    <p>Unity | Programmer | UI/UX</p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="card card-clickable">
+        <a target="_blank" href="https://itch.io/queue/c/2558455/my-games?game_id=2119927">
+            <img class="card-img" src="Assets/MissedHarvest.png" alt="Missed Harvest video game" style="width:100%">
+            <div class="card-container">
+                <h4><b>Missed Harvest</b><span class="card-info" style="float: right; font-size: 16px; font-weight: normal;">2023</span></h4>
+                <p>
+                    Missed Harvest is a 3D co-op 2-player platformer game where players play as a chicken
+                    trying to escape the farm by using items, solving puzzles, and shooting enemies with an egg gun!
+                </p>
+                <div class="card-info">
+                    <hr style="border-style: solid" />
+                    <p>Unity | Programmer | UI/UX</p>
+                </div>
+            </div>
+        </a>
+    </div>-->
+            </div>
+            <!--<div class="game">
+        <a target="_blank" href="https://jalagon.itch.io/craftaway">
+            <img class="game-img" src="Assets/CraftAway.png" alt="CraftAway video game">
+            <div class="overlay">
+                <div class="game-text">CraftAway</div>
+            </div>
+        </a>
+    </div>
+
+    <div class="game">
+        <a target="_blank" href="https://madjuse.itch.io/spring-scaffold-2022">
+            <img class="game-img" src="Assets/AcornQuest.png" alt="AcornQuest video game">
+            <div class="overlay">
+                <div class="game-text">AcornQuest</div>
+            </div>
+        </a>
+    </div>
+            <div class="description-grid">
+        <div class="game">
+            <h4>CraftAway</h4>
+            <p class="description">
+                [CraftAway]
+            </p>
+        </div>
+
+        <div class="game">
+            <h4>AcornQuest</h4>
+            <p class="description">
+                AcornQuest is a 2D platformer game where players try to complete levels through solving puzzles, collecting materials to craft items, and completing jumping challenges, all while evading enemies!
+            </p>
+        </div>
+    </div>-->
+        </div>
+    </section>
+
+    <script>
+        function openTab(evt, tabName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(tabName).style.display = "flex";
+          evt.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+
+        // Function to create card from template with provided data
+        function createCard(title, year, content, role) {
+            const templateDoc = document.getElementById('game-card-template').contentDocument;
+            const templateContent = templateDoc.getElementById('game-card-template-content');
+
+            // Clone the template content
+            const clone = templateContent.cloneNode(true);
+
+            // Fill in the placeholders with provided data
+            clone.querySelector('b').textContent = title;
+            clone.querySelector('.card-info').textContent = year;
+            clone.querySelector('p').textContent = content;
+            clone.querySelector('.card-info p').textContent = role;
+
+            // Append the cloned card to the container
+            document.getElementById('card-container').appendChild(clone);
+        }
+
+        // Create three instances of the card with different data
+        createCard("CraftAway", "2024", "CraftAway description", "Unity | Programmer | UI/UX | Pixel Artist");
+        createCard("Another Game", "2023", "Another game description", "Game Design | Artist | Programmer");
+        createCard("Yet Another Game", "2022", "Yet another game description", "Designer | Sound Engineer");
+    </script>
+
+</body>
+
+    </html>

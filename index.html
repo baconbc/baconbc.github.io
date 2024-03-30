@@ -10,211 +10,8 @@ EMAIL: cravottb@uci.edu
     <meta charset="utf-8">
     <meta name="author" content="Brooke Cravotta self portrait">
     <meta name="description" content="my online portfolio">
-
     <title>Brooke's Portfolio</title>
-
-    <style>
-        body {
-            background-color: #3a2a61;
-            color: #A595B7;
-            padding-left: 10%;
-            padding-right: 10%;
-            font-family: Helvetica;
-            text-align: center;
-        }
-
-        p {
-            margin-left: 5%;
-            margin-right: 5%;
-        }
-
-        a {
-            text-decoration: none;
-        }
-        
-        h1 {
-            font-family: 'Lucida Handwriting';
-            font-size: 75px;
-            margin-bottom: 25px;
-        }
-
-        h2 {
-            font-size: 35px;
-            margin-bottom: 15px;
-        }
-
-        h3 {
-            font-size: 26px;
-            margin-bottom: -5px;
-        }
-
-        h4 {
-            font-size: 21px;
-            margin-top: 2px;
-            margin-bottom: -2px;
-        }
-
-        ul {
-            background-color: #599bae;
-            margin: 0;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            list-style-type: none;
-            overflow: hidden;
-        }
-
-        li a {
-            float: left;
-            color: #BEE0EA;
-            display: block;
-            padding: 15px;
-            text-decoration: none;
-        }
-
-        li a:hover {
-            background-color: #397F93;
-        }
-
-        /* used to account for scrollbar at the top when jumping to a section using the navbar */
-        .anchor {
-            scroll-margin-top: 50px;
-        }
-        
-        .description-grid {
-            display: flex;
-            justify-content: center;
-        }
-
-        .description {
-            margin-top: 7px;
-            margin-left: 4.5px;
-            margin-right: 4.5px;
-        }
-
-        /*
-        .overlay {
-            background-color: #60AABE;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            height: 0;
-            transition: .5s ease;
-            overflow: hidden;
-            opacity: 0.85;
-            font-weight: bold;
-        }
-        .game:hover .overlay {height: 100%;}*/
-
-        .games-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-auto-rows: minmax(100px, auto);
-            column-gap: 20px;
-            row-gap: 40px;
-            max-width: 800px;
-        }
-
-        .card {
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-            transition: 0.3s;
-            width: 100%;
-            border-radius: 5px;
-            background-color: #A595B7;
-            color: #551a8b;
-            text-align: left;
-
-        }
-
-        .card-clickable:hover {
-            box-shadow: 0 16px 24px 0 rgba(0,0,0,0.5);
-        }
-
-        .card-img {
-            border-radius: 5px 5px 0 0;
-        }
-
-        .card-container {
-            padding: 10px 20px;
-        }
-
-        .card-container p {
-            margin-left: 0%;
-            margin-right: 0%;
-        }
-
-        .card-info {
-            color: #837192;
-        }
-
-        .gameplay {
-            padding-top: 20px;
-            width: 40%;
-            min-width: 300px;
-        }
-
-        .gameplay-img {
-            width: 75%;
-            max-width: 400px;
-        }
-
-        .gameplay-text {
-            margin-top: 0px;
-            text-align: center;
-            width: 70%;
-            max-width: 400px;
-        }
-
-        /* Style the tab */
-        .tab {
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 1px solid #A595B7;
-            border-bottom: none;
-            background-color: #A595B7;
-            color: #3a2a61;
-        }
-
-        /* Style the buttons inside the tab */
-        .tab button {
-            background-color: inherit;
-            color: inherit;
-            float: left;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            padding: 14px 16px;
-            transition: 0.3s;
-            font-size: 17px;
-            font-weight: bold;
-        }
-
-        /* Change background color of buttons on hover */
-        .tab button:hover {
-            background-color: #755f99; /*#d1c8db;*/
-        }
-
-        /* Create an active/current tablink class */
-        .tab button.active {
-            background-color: #523c78; /*#c0b0d1;*/
-            color: #A595B7;
-        }
-
-        /* Style the tab content */
-        .tabcontent {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 6px 12px;
-            border: 3px solid #A595B7;
-            background-color: #523c78;
-            border-top: none;
-            flex-direction: column;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -225,6 +22,35 @@ EMAIL: cravottb@uci.edu
             <li><a href="#exp">Experience</a></li>
         </ul>
     </nav>
+
+    <template id="game-card-template-content">
+        <div class="card card-clickable">
+            <a target="_blank" href="#">
+                <img class="card-img" alt="video game" style="width:100%">
+                <div class="card-container">
+                    <h4><b>Title</b><span class="card-info" style="float: right; font-size: 16px; font-weight: normal;"></span></h4>
+                    <p>Description</p>
+                    <div class="card-info">
+                        <hr style="border-style: solid" />
+                        <p>Game Engine | Role</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </template>
+
+    <template id="gameplay-template-content">
+        <div class="gameplay">
+            <div class="card">
+                <img class="card-img" alt="mechanic" style="width:100%">
+                <div class="card-container">
+                    <p>Description</p>
+                </div>
+            </div>
+        </div>
+    </template>
+
+
 
     <section>
         <h1>Brooke Cravotta</h1>
@@ -269,49 +95,7 @@ EMAIL: cravottb@uci.edu
                 Here are some highlights of my UI/UX work:
             </p>
 
-            <div class="gameplay">
-                <div class="card">
-                    <img class="card-img" src="Assets/CraftingMechanic.gif" alt="Inventory and Crafting System" style="width:100%">
-                    <div class="card-container">
-                        <p>
-                            [Describe crafting system mechanic]
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="gameplay">
-                <div class="card">
-                    <img class="card-img" src="Assets/Notes.gif" alt="Note Interface" style="width:100%">
-                    <div class="card-container">
-                        <p>
-                            [Describe note mechanic]
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="gameplay">
-                <div class="card">
-                    <img class="card-img" src="Assets/Hero'sParry.gif" alt="Main Menu" style="width:100%">
-                    <div class="card-container">
-                        <p>
-                            [Describe main menu]
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="gameplay">
-                <div class="card">
-                    <img class="card-img" src="Assets/MissedHarvest.gif" alt="Settings Menu" style="width:100%">
-                    <div class="card-container">
-                        <p>
-                            [Describe chicken game mechanic]
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <div id="uiux-container"></div>
         </div>
 
 
@@ -323,50 +107,7 @@ EMAIL: cravottb@uci.edu
                 Here are some of my favorite gameplay mechanics I've worked on:
             </p>
 
-            <div class="gameplay">
-                <div class="card">
-                    <img class="card-img" src="Assets/BossMechanics.gif" alt="Boss fighting mechanics" style="width:100%">
-                    <div class="card-container">
-                        <p>
-                            This clip showcases the boss Treevil from my latest game Island Boy.
-                            I programmed the boss attacks, created the sprites, and worked on the boss summoning mechanic.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="gameplay">
-                <div class="card">
-                    <img class="card-img" src="Assets/Fishing.gif" alt="Fishing mechanic" style="width:100%">
-                    <div class="card-container">
-                        <p>
-                            [Describe fishing mechanic]
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="gameplay">
-                <div class="card">
-                    <img class="card-img" src="Assets/PlantGrowthMechanic.gif" alt="Plant growing mechanics" style="width:100%">
-                    <div class="card-container">
-                        <p>
-                            [Describe Plant growing mechanic]
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="gameplay">
-                <div class="card">
-                    <img class="card-img" src="Assets/MoneyGun.gif" alt="Money gun mechanics" style="width:100%">
-                    <div class="card-container">
-                        <p>
-                            [Describe Money gun mechanic]
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <div id="gameplay-container"></div>
         </div>
 
 
@@ -377,128 +118,30 @@ EMAIL: cravottb@uci.edu
                 I've worked on several different games so far, below are links to some of my favorites:
             </p>
 
-            <div class="games-grid">
-                <div class="card card-clickable">
-                    <a target="_blank" href="https://jalagon.itch.io/craftaway">
-                        <img class="card-img" src="Assets/CraftAway.png" alt="CraftAway video game" style="width:100%">
-                        <div class="card-container">
-                            <h4><b>CraftAway</b><span class="card-info" style="float: right; font-size: 16px; font-weight: normal;">2024</span></h4>
-                            <p>
-                                [CraftAway]
-                            </p>
-                            <div class="card-info">
-                                <hr style="border-style: solid" />
-                                <p>Unity | Programmer | UI/UX | Pixel Artist</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="card card-clickable">
-                    <a target="_blank" href="https://madjuse.itch.io/spring-scaffold-2022">
-                        <img class="card-img" src="Assets/AcornQuest.png" alt="AcornQuest video game" style="width:100%">
-                        <div class="card-container">
-                            <h4><b>AcornQuest</b><span class="card-info" style="float: right; font-size: 16px; font-weight: normal;">2022</span></h4>
-                            <p>
-                                AcornQuest is a 2D platformer game where players try to complete levels through solving puzzles,
-                                collecting materials to craft items, and completing jumping challenges, all while evading enemies!
-                            </p>
-                            <div class="card-info">
-                                <hr style="border-style: solid" />
-                                <p>Unity | Team Lead | Programmer | UI/UX</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="card card-clickable">
-                    <a target="_blank" href="https://quetzde6th.itch.io/distant-treasures">
-                        <img class="card-img" src="Assets/DistantTreasures.png" alt="Distant Treasures video game" style="width:100%">
-                        <div class="card-container">
-                            <h4><b>Distant Treasures</b><span class="card-info" style="float: right; font-size: 16px; font-weight: normal;">2022</span></h4>
-                            <p>
-                                Distant Treasures is a 2D story-driven adventure game where players wake up in a mysterious room
-                                where they must interact with the environment and solve puzzles to try and escape.
-                            </p>
-                            <div class="card-info">
-                                <hr style="border-style: solid" />
-                                <p>Unity | Programmer | UI/UX</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="card card-clickable">
-                    <a target="_blank" href="https://itch.io/queue/c/2558455/my-games?game_id=2119927">
-                        <img class="card-img" src="Assets/MissedHarvest.png" alt="Missed Harvest video game" style="width:100%">
-                        <div class="card-container">
-                            <h4><b>Missed Harvest</b><span class="card-info" style="float: right; font-size: 16px; font-weight: normal;">2023</span></h4>
-                            <p>
-                                Missed Harvest is a 3D co-op 2-player platformer game where players play as a chicken
-                                trying to escape the farm by using items, solving puzzles, and shooting enemies with an egg gun!
-                            </p>
-                            <div class="card-info">
-                                <hr style="border-style: solid" />
-                                <p>Unity | Programmer | UI/UX</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <!--<div class="game">
-        <a target="_blank" href="https://jalagon.itch.io/craftaway">
-            <img class="game-img" src="Assets/CraftAway.png" alt="CraftAway video game">
-            <div class="overlay">
-                <div class="game-text">CraftAway</div>
-            </div>
-        </a>
-    </div>
-
-    <div class="game">
-        <a target="_blank" href="https://madjuse.itch.io/spring-scaffold-2022">
-            <img class="game-img" src="Assets/AcornQuest.png" alt="AcornQuest video game">
-            <div class="overlay">
-                <div class="game-text">AcornQuest</div>
-            </div>
-        </a>
-    </div>
-            <div class="description-grid">
-        <div class="game">
-            <h4>CraftAway</h4>
-            <p class="description">
-                [CraftAway]
-            </p>
-        </div>
-
-        <div class="game">
-            <h4>AcornQuest</h4>
-            <p class="description">
-                AcornQuest is a 2D platformer game where players try to complete levels through solving puzzles, collecting materials to craft items, and completing jumping challenges, all while evading enemies!
-            </p>
-        </div>
-    </div>-->
+            <div class="games-grid" id="games-container"></div>
         </div>
     </section>
 
     <script>
         function openTab(evt, tabName) {
-          var i, tabcontent, tablinks;
-          tabcontent = document.getElementsByClassName("tabcontent");
-          for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-          }
-          tablinks = document.getElementsByClassName("tablinks");
-          for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-          }
-          document.getElementById(tabName).style.display = "flex";
-          evt.currentTarget.className += " active";
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "flex";
+            evt.currentTarget.className += " active";
         }
 
         // Get the element with id="defaultOpen" and click on it
         document.getElementById("defaultOpen").click();
     </script>
-
+    <script src="gameplay-script.js"></script>
+    <script src="game-card-script.js"></script>
 </body>
 
     </html>
