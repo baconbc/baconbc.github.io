@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+
+<!--
+WRITTEN BY: Brooke Cravotta
+EMAIL: cravottb@uci.edu
+-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Brooke Cravotta self portrait">
+    <meta name="description" content="my online portfolio">
+    <title>Brooke's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Intro</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#exp">Experience</a></li>
+        </ul>
+    </nav>
+
+    <template id="game-card-template-content">
+        <div class="card card-clickable">
+            <a target="_blank" href="#">
+                <img class="card-img" alt="video game" style="width:100%">
+                <div class="card-container">
+                    <h4><b>Title</b><span class="card-info" style="float: right; font-size: 16px; font-weight: normal;"></span></h4>
+                    <p>Description</p>
+                    <div class="card-info">
+                        <hr style="border-style: solid" />
+                        <p>Game Engine | Role</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </template>
+
+    <template id="gameplay-template-content">
+        <div class="gameplay">
+            <div class="card">
+                <img class="card-img" alt="mechanic" style="width:100%">
+                <div class="card-container">
+                    <p>Description</p>
+                </div>
+            </div>
+        </div>
+    </template>
+
+
+
+    <section>
+        <h1>Brooke Cravotta</h1>
+        <img src="Assets/ProfilePic.png" style="width: 30%; min-width: 300px;" alt="Brooke Cravotta self portrait">
+        <p>Hi I'm Brooke, and I'm a video game developer. I have experience in programming and UI/UX.</p>
+    </section>
+
+    <section id="about" class="anchor">
+        <hr>
+        <h2>About Me</h2>
+        <p>
+            I'm a 4th year Computer Game Science major at University of California, Irvine.
+            I have been creating video games since 2018 and have developed 9 video games so far and 2 tabletop games.
+            I am part of UCI's Video Game Development Club (VGDC) and have created several games within the club, some of which I was a team lead.
+            I am currently working on an ambitious 10th video game in a team of 5 as part of my senior Capstone project with a mentor from Blizzard.
+            <br />
+            <br />
+            The game engines I use are Unity (C#) and Godot.
+            <br />
+            The programming languages I primarily use are C++, C#, Java, JavaScript, Python, and HTML/CSS.
+            <br />
+            Some additional software I am proficient in are Office 365, Git, and Adobe Creative Cloud (Illustrator, Lightroom, Photoshop, Premiere Pro), and Blender.
+        </p>
+    </section>
+
+    <section id="exp" class="anchor">
+        <hr>
+        <h2>Experience</h2>
+
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'UI-UX')" id="defaultOpen">UI / UX</button>
+            <button class="tablinks" onclick="openTab(event, 'Mechanics')">Gameplay Mechanics</button>
+            <button class="tablinks" onclick="openTab(event, 'Games')">Games</button>
+        </div>
+
+
+        <!--UI-UX Section-->
+        <div id="UI-UX" class="tabcontent">
+            <h3>UI / UX</h3>
+            <p>
+                I enjoy doing UI/UX work on video games, both front-end and back-end.
+                Here are some highlights of my UI/UX work:
+            </p>
+
+            <div id="uiux-container"></div>
+        </div>
+
+
+        <!--Gameplay Mechanics Section-->
+        <div id="Mechanics" class="tabcontent">
+            <h3>Gameplay Mechanics</h3>
+            <p>
+                I love programming gameplay mechanics and features when developing a video game.
+                Here are some of my favorite gameplay mechanics I've worked on:
+            </p>
+
+            <div id="gameplay-container"></div>
+        </div>
+
+
+        <!--Games Section-->
+        <div id="Games" class="tabcontent">
+            <h3>Games</h3>
+            <p>
+                I've worked on several different games so far, below are links to some of my favorites:
+            </p>
+
+            <div class="games-grid" id="games-container"></div>
+        </div>
+    </section>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "flex";
+            evt.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+    <script src="gameplay-script.js"></script>
+    <script src="game-card-script.js"></script>
+</body>
+
+    </html>
