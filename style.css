@@ -1,10 +1,14 @@
 body {
-    font-size: 18px;
-    font-family: Helvetica;
+    font-size: 20px;
+    font-family: Helvetica, sans-serif;
     margin: 0%;
     /* visuals */
     background-color: #3a2a61;
     color: #A595B7;
+}
+
+.my-name {
+    font-family: 'Lucida Handwriting';
 }
 
 section {
@@ -24,23 +28,22 @@ hr {
 }
 
 h1 {
-    font-family: 'Lucida Handwriting';
-    font-size: 75px;
+    font-size: 77px;
     margin-bottom: 25px;
 }
 
 h2 {
-    font-size: 35px;
+    font-size: 40px;
     margin-bottom: 15px;
 }
 
 h3 {
-    font-size: 26px;
+    font-size: 28px;
     margin-bottom: -5px;
 }
 
 h4 {
-    font-size: 21px;
+    font-size: 23px;
     margin-top: 2px;
     margin-bottom: -2px;
 }
@@ -58,8 +61,8 @@ ul {
     border-bottom: 5px solid #397F93;
 }
 
-li a {
-    font-size: 22px;
+.nav-heading {
+    font-size: 24px;
     float: left;
     display: block;
     padding: 15px;
@@ -107,6 +110,32 @@ footer {
     .icon:hover {
         transform: scale(1.25); /* Scale up to 1.25 times the original size */
     }
+
+
+.column {
+    flex: 1; /* Each column takes up equal space */
+}
+
+.skill-heading {
+    padding-bottom: 10px;
+    text-decoration: underline;
+}
+
+.skill {
+    display: flex;
+    align-items: center; /* Center vertically */
+    margin-block-start: 5px;
+}
+
+.skill-img {
+    margin-right: 5px; /* Adjust spacing between image and text */
+    margin-left: 20px; /* Adjust indent */
+}
+
+.skill-text {
+    margin-block: 0px;
+}
+
 
 
 

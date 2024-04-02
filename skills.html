@@ -19,16 +19,30 @@ EMAIL: cravottb@uci.edu
 <body>
     <nav id="navigation">
         <ul>
-            <li><a href="index.html">About Me</a></li>
-            <li><a href="skills.html" class="current">Skills</a></li>
-            <li><a href="exp.html">Experience</a></li>
+            <li><a class="nav-heading" href="index.html">About</a></li>
+            <li><a class="nav-heading current" href="skills.html">Skills</a></li>
+            <li><a class="nav-heading" href="exp.html">Portfolio</a></li>
         </ul>
     </nav>
 
+
+    <template id="skill-template-content">
+        <div class="skill">
+            <img class="skill-img" style="width: 30px;">
+            <p class="skill-text">Skill</p>
+        </div>
+    </template>
+
     <section>
-        <h1>Brooke Cravotta</h1>
-        <img src="Assets/ProfilePic.png" style="width: 30%; min-width: 300px;" alt="Brooke Cravotta self portrait">
-        <p>Hi I'm Brooke, and I'm a video game developer. I have experience in programming and UI/UX.</p>
+        <h1 class="my-name">Brooke Cravotta</h1>
+        <!--
+    <p>
+        The game engines I use are Unity (C#) and Godot.
+        <br />
+        The programming languages I primarily use are C++, C#, Java, JavaScript, Python, and HTML/CSS.
+        <br />
+        Some additional software I am proficient in are Office 365, Git, and Adobe Creative Cloud (Illustrator, Lightroom, Photoshop, Premiere Pro), and Blender.
+    </p>-->
     </section>
 
 
@@ -36,18 +50,44 @@ EMAIL: cravottb@uci.edu
     <section id="skills" class="anchor">
         <hr>
         <h2>Skills</h2>
+        <hr>
         <p>
             The game engines I use are Unity (C#) and Godot.
-            <br />
-            The programming languages I primarily use are C++, C#, Java, JavaScript, Python, and HTML/CSS.
-            <br />
-            Some additional software I am proficient in are Office 365, Git, and Adobe Creative Cloud (Illustrator, Lightroom, Photoshop, Premiere Pro), and Blender.
         </p>
+
+        <!--
+
+        <i class="fa-brands fa-java"></i>
+        <i class="fa-brands fa-js"></i>
+        <i class="fa-brands fa-html5"></i>
+        <i class="fa-brands fa-css3-alt"></i>
+        <i class="fa-brands fa-angular"></i>
+        c++
+        c#
+
+        <i class="fa-brands fa-github"></i>
+        <i class="fa-brands fa-git-alt"></i>
+        356
+-->
+        <div style="display:flex">
+            <div class="column" id="skills-languages">
+                <h3 class="skill-heading">Languages</h3>
+            </div>
+            <div class="column">
+                <h3 class="skill-heading">Engines</h3>
+                <div id="skills-engines"></div>
+                <h3 class="skill-heading">Software</h3>
+                <div id="skills-software"></div>
+            </div>
+        </div>
+
     </section>
 
 
 
     <footer id="footer"></footer>
+
+    <script src="skills-script.js"></script>
 </body>
 
 </html>
