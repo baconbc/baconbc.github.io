@@ -1,6 +1,6 @@
 // Function to create gameplay display from template with provided data
 function createGameplay(ID, imgURL, imgAlt, description) {
-    const templateContent = document.getElementById('gameplay-template-content').content;
+    const templateContent = document.getElementById('new-template-content').content;
 
     // Clone the template content
     const clone = templateContent.cloneNode(true);
@@ -9,7 +9,7 @@ function createGameplay(ID, imgURL, imgAlt, description) {
     clone.querySelector('p').textContent = description;
 
     // Modify the image source
-    const cardImg = clone.querySelector('.card-img');
+    const cardImg = clone.querySelector('.gameplay-img');
     cardImg.src = imgURL;
     cardImg.alt = imgAlt;
 

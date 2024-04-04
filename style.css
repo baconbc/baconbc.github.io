@@ -3,7 +3,15 @@ body {
     font-family: Helvetica, sans-serif;
     margin: 0%;
     /* visuals */
-    background-color: #3a2a61;
+    /*background-color: #302558;
+    background-image: url("Assets/background.png");
+    background-repeat: repeat-y;
+    background-size: 100% 100vh;*/
+    /*background: linear-gradient(to right, #9a85b1 0%, #3a2a61 5%, #302558 10%, #302558 92%, #397f93 100%);
+    background: linear-gradient(to bottom right, #9a85b1 0%, #302558 10%, #302558 85%, #397f93 100%);*/
+    background-color: #302558;
+    /*background: linear-gradient(to right, #27245d 0%, #3a2a61 8%, #3a2a61 92%, #27245d 100%);
+    background: linear-gradient(to bottom, #599bae 0%, #302558 20%, #302558 92%, #599bae 100%);*/
     color: #A595B7;
 }
 
@@ -12,11 +20,25 @@ body {
 }
 
 section {
-    padding-left: 10%;
-    padding-right: 10%;
-    margin-left:10%;
-    margin-right:10%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 25px;
+    width: 80%;
+    max-width: 1300px;
+    margin: auto;
+    margin-top: -2px;
     text-align: left;
+    /* visuals */
+    background-color: #3a2a61;
+    color: #A595B7;
+    
+    box-shadow: 0 0 80px 70px #A595B7, /* middle magenta */
+    0 0 120px 80px #0ff; /* outer cyan */
+}
+
+p {
+    margin-block: 0;
+    padding-block: 10px;
 }
 
 a {
@@ -25,11 +47,14 @@ a {
 
 hr {
     border-style: solid;
+    margin-block: 0;
+    margin-bottom: 10px;
 }
 
 h1 {
     font-size: 77px;
-    margin-bottom: 25px;
+    margin-bottom: 0;
+    padding-bottom: 25px;
 }
 
 h2 {
@@ -90,7 +115,7 @@ footer {
     text-align: center;
     padding: 5px;
     padding-bottom: 10px;
-    margin-top: 25px;
+    /*margin-top: 25px;*/
     /* visuals */
     background-color: #599bae;
     color: #BEE0EA;
@@ -243,4 +268,23 @@ footer {
     width: 100%;
     min-width: 300px;
     max-width: 600px;
+}
+
+.gameplay-card {
+    display: flex;
+    width: 100%;
+    border-radius: 5px;
+    text-align: left;
+    /* visuals */
+    background-color: #A595B7;
+    color: #551a8b;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.gameplay-img {
+    border-radius: 5px 0 0 5px;
+}
+
+.gameplay-text {
+    margin: 15px;
 }
