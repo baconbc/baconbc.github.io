@@ -13,7 +13,7 @@ EMAIL: cravottb@uci.edu
     <title>Brooke's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/e060578a99.js" crossorigin="anonymous"></script>
-    <script src="footer.js"></script>
+    <script src="Scripts/footer.js"></script>
 </head>
 
 <body>
@@ -35,19 +35,27 @@ EMAIL: cravottb@uci.edu
 
     <section id="about" class="anchor">
         <h1 class="my-name">Brooke Cravotta</h1>
-        <img src="Assets/ProfilePic.png" style="width: 30%; min-width: 300px;" alt="Brooke Cravotta self portrait">
-        <p>Hi I'm Brooke, and I'm a video game developer. I have experience in programming and UI/UX.</p>
-        <hr>
 
+        <div class="section-heading">
+            <hr>
+            <h2>About Me</h2>
+            <hr>
+        </div>
 
-        <h2>About Me</h2>
-        <hr>
-        <p>
-            I'm a 4th year Computer Game Science major at University of California, Irvine.
-            I have been creating video games since 2018 and have developed 9 video games so far and 2 tabletop games.
-            I am part of UCI's Video Game Development Club (VGDC) and have created several games within the club, some of which I was a team lead.
-            I am currently working on an ambitious 10th video game in a team of 5 as part of my senior Capstone project with a mentor from Blizzard.
-        </p>
+        <p>Hi I'm Brooke, and I'm a video game developer. I love programming and UI/UX. <br /></p>
+        <div style="display:flex">
+            <div class="column" style="min-width: 200px;">
+                <img src="Assets/ProfilePic.png" alt="Brooke Cravotta self portrait">
+            </div>
+            <div class="description" style="flex: 2.5;">
+                <p>
+                    I'm a 4th year Computer Game Science major at University of California, Irvine.
+                    I have been creating video games since 2018 and have developed 9 video games so far and 2 tabletop games.
+                    I am part of UCI's Video Game Development Club (VGDC) and have created several games within the club, some of which I was a team lead.
+                    I am currently working on an ambitious 10th video game in a team of 5 as part of my senior Capstone project with a mentor from Blizzard.
+                </p>
+            </div>
+        </div>
 
     </section>
 

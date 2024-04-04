@@ -13,7 +13,7 @@ EMAIL: cravottb@uci.edu
     <title>Brooke's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/e060578a99.js" crossorigin="anonymous"></script>
-    <script src="footer.js"></script>
+    <script src="Scripts/footer.js"></script>
 </head>
 
 <body>
@@ -44,7 +44,7 @@ EMAIL: cravottb@uci.edu
     <template id="gameplay-template-content">
         <div class="gameplay">
             <div class="card">
-                <img class="card-img" alt="mechanic" style="width:100%">
+                <img class="card-img" alt="mechanic">
                 <div class="card-container">
                     <p>Description</p>
                 </div>
@@ -55,8 +55,12 @@ EMAIL: cravottb@uci.edu
     <template id="new-template-content">
         <div class="gameplay">
             <div class="gameplay-card">
-                <img class="gameplay-img" alt="mechanic" style="width:50%">
-                <p class="gameplay-text">Description</p>
+                <div class="column img-bg">
+                    <img class="gameplay-img" alt="mechanic">
+                </div>
+                <div class="column">
+                    <p class="gameplay-text">Description</p>
+                </div>
             </div>
         </div>
     </template>
@@ -74,6 +78,7 @@ EMAIL: cravottb@uci.edu
         <hr>
         <h2>Portfolio</h2>
         <hr>
+
         <p>Text</p>
 
         <div class="tab">
@@ -140,8 +145,8 @@ EMAIL: cravottb@uci.edu
         // Get the element with id="defaultOpen" and click on it
         document.getElementById("defaultOpen").click();
     </script>
-    <script src="gameplay-script.js"></script>
-    <script src="game-card-script.js"></script>
+    <script src="Scripts/gameplay-script.js"></script>
+    <script src="Scripts/game-card-script.js"></script>
 </body>
 
 </html>

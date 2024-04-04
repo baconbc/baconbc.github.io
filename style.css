@@ -37,6 +37,17 @@ p {
     padding-block: 10px;
 }
 
+.description {
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 a {
     text-decoration: none;
 }
@@ -72,6 +83,14 @@ h4 {
     font-size: 23px;
     margin-top: 2px;
     margin-bottom: -2px;
+}
+
+.section-heading {
+    /* visuals */
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #20cfcf, #b694dc, rgba(255, 255, 255, 0));
+    /*background: -webkit-linear-gradient(#20cfcf, #b694dc);*/
+    color: #3a2a61;
+    text-align: center;
 }
 
 ul {
@@ -268,12 +287,11 @@ footer {
     padding-top: 20px;
     width: 100%;
     min-width: 300px;
-    max-width: 600px;
+    max-width: 1000px;
 }
 
 .gameplay-card {
     display: flex;
-    width: 100%;
     border-radius: 5px;
     text-align: left;
     /* visuals */
@@ -287,5 +305,9 @@ footer {
 }
 
 .gameplay-text {
-    margin: 15px;
+    padding: 15px;
+}
+
+.img-bg {
+    border-radius: 5px 0 0 5px;
 }
