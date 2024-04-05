@@ -24,10 +24,14 @@ section {
     margin: auto;
     margin-top: -2px;
     text-align: left;
+
+
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
     /* visuals */
     background-color: #3a2a61;
     color: #A595B7;
-    
     box-shadow: 0 0 80px 70px #A595B7, /* inner */
     0 0 120px 80px #0ff; /* outer */
 }
@@ -135,6 +139,8 @@ footer {
     text-align: center;
     padding: 5px;
     padding-bottom: 10px;
+
+    margin-top: auto;
     /*margin-top: 25px;*/
     /* visuals */
     background-color: #599bae;
