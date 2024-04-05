@@ -13,6 +13,11 @@ body {
 
 .my-name {
     font-family: 'Lucida Handwriting';
+    /* visuals */
+    /*background: -webkit-linear-gradient(#0ff, #A595B7, #b694dc);*/
+    background: repeating-linear-gradient(to bottom, #0ff 0, #A595B7 70px, #b694dc 110px);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 section {
@@ -41,11 +46,6 @@ p {
     padding-block: 10px;
 }
 
-.description {
-    padding-left: 2%;
-    padding-right: 2%;
-}
-
 img {
     display: block;
     width: 100%;
@@ -67,10 +67,6 @@ h1 {
     margin-bottom: 0;
     padding-top: 5px;
     padding-bottom: 25px;
-    /* visuals */
-    background: -webkit-linear-gradient(#0ff, #A595B7, #b694dc);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 h2 {
@@ -316,4 +312,38 @@ footer {
 
 .img-bg {
     border-radius: 5px 0 0 5px;
+}
+
+
+.description-container {
+    display: flex;
+    flex-direction: row; /* Stack items horizontally */
+}
+
+.description-img {
+    min-width: 200px;
+    flex: 1;
+}
+
+.description {
+    padding-left: 2%;
+    padding-right: 2%;
+    flex: 2.5;
+}
+
+/* Apply styles when screen width is less than or equal to given value */
+@media screen and (max-width: 768px) {
+    .description-container {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .description-img {
+        min-width: auto; /* Remove minimum width */
+        max-width: 350px;
+        margin: 0 auto; /* Center horizontally */
+    }
+
+    .description {
+        flex: 1; /* Take remaining space */
+    }
 }
