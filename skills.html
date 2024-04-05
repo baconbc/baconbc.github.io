@@ -28,7 +28,7 @@ EMAIL: cravottb@uci.edu
 
     <template id="skill-template-content">
         <div class="skill">
-            <img class="skill-img" style="width: 30px;">
+            <img class="skill-img">
             <p class="skill-text">Skill</p>
         </div>
     </template>
@@ -53,15 +53,17 @@ EMAIL: cravottb@uci.edu
             <h2>Skills</h2>
         </div>
 
-        <p>
-            The game engines I use are Unity (C#) and Godot.
-        </p>
+        <div class="summary">
+            <p>
+                The game engines I use are Unity (C#) and Godot.
+            </p>
+        </div>
 
-        <div style="display:flex">
-            <div class="column" id="skills-languages">
+        <div class="skill-col-container">
+            <div class="column skill-column" id="skills-languages">
                 <h3 class="skill-heading">Languages</h3>
             </div>
-            <div class="column">
+            <div class="column skill-column">
                 <h3 class="skill-heading">Engines</h3>
                 <div id="skills-engines"></div>
                 <h3 class="skill-heading">Software</h3>

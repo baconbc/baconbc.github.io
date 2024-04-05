@@ -28,7 +28,7 @@ EMAIL: cravottb@uci.edu
     <template id="game-card-template-content">
         <div class="card card-clickable">
             <a target="_blank" href="#">
-                <img class="card-img" alt="video game" style="width:100%">
+                <img class="card-img" alt="video game">
                 <div class="card-container">
                     <h4><b>Title</b><span class="card-info" style="float: right; font-size: 16px; font-weight: normal;"></span></h4>
                     <p>Description</p>
@@ -43,19 +43,8 @@ EMAIL: cravottb@uci.edu
 
     <template id="gameplay-template-content">
         <div class="gameplay">
-            <div class="card">
-                <img class="card-img" alt="mechanic">
-                <div class="card-container">
-                    <p>Description</p>
-                </div>
-            </div>
-        </div>
-    </template>
-
-    <template id="new-template-content">
-        <div class="gameplay">
             <div class="gameplay-card">
-                <div class="column img-bg">
+                <div class="column">
                     <img class="gameplay-img" alt="mechanic">
                 </div>
                 <div class="column">
@@ -73,7 +62,9 @@ EMAIL: cravottb@uci.edu
             <h2>Portfolio</h2>
         </div>
 
-        <p>Text</p>
+        <div class="summary">
+            <p>Text</p>
+        </div>
 
         <div class="tab">
             <button class="tablinks" onclick="openTab(event, 'UI-UX')" id="defaultOpen">UI / UX</button>
@@ -85,10 +76,12 @@ EMAIL: cravottb@uci.edu
         <!--UI-UX Section-->
         <div id="UI-UX" class="tabcontent">
             <h3>UI / UX</h3>
-            <p>
-                I enjoy doing UI/UX work on video games, both front-end and back-end.
-                Here are some highlights of my UI/UX work:
-            </p>
+            <div class="summary">
+                <p>
+                    I enjoy doing UI/UX work on video games, both front-end and back-end.
+                    Here are some highlights of my UI/UX work:
+                </p>
+            </div>
 
             <div id="uiux-container"></div>
         </div>
@@ -97,10 +90,12 @@ EMAIL: cravottb@uci.edu
         <!--Gameplay Mechanics Section-->
         <div id="Mechanics" class="tabcontent">
             <h3>Gameplay Mechanics</h3>
-            <p>
-                I love programming gameplay mechanics and features when developing a video game.
-                Here are some of my favorite gameplay mechanics I've worked on:
-            </p>
+            <div class="summary">
+                <p>
+                    I love programming gameplay mechanics and features when developing a video game.
+                    Here are some of my favorite gameplay mechanics I've worked on:
+                </p>
+            </div>
 
             <div id="gameplay-container"></div>
         </div>
@@ -109,13 +104,15 @@ EMAIL: cravottb@uci.edu
         <!--Games Section-->
         <div id="Games" class="tabcontent">
             <h3>Games</h3>
-            <p>
-                I've worked on several different games so far, below are links to some of my favorites:
-            </p>
+            <div class="summary">
+                <p>
+                    I've worked on several different games so far, below are links to some of my favorites:
+                </p>
+            </div>
 
             <div class="games-grid" id="games-container"></div>
         </div>
-    </section>
+</section>
 
 
 

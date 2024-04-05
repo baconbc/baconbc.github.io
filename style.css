@@ -3,18 +3,14 @@ body {
     font-family: Helvetica, sans-serif;
     margin: 0%;
     /* visuals */
-    /*background-color: #302558;
-    background-image: url("Assets/background.png");
-    background-repeat: repeat-y;
-    background-size: 100% 100vh;*/
     background-color: #302558;
     color: #A595B7;
 }
 
 .my-name {
     font-family: 'Lucida Handwriting';
+    text-align: center;
     /* visuals */
-    /*background: -webkit-linear-gradient(#0ff, #A595B7, #b694dc);*/
     background: repeating-linear-gradient(to bottom, #0ff 0, #A595B7 70px, #b694dc 110px);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -30,15 +26,16 @@ section {
     margin-top: -2px;
     text-align: left;
 
-
+    /* make it so that section extends to 85% of the visible screen so that it reaches the bottom */
     min-height: 85vh;
     display: flex;
     flex-direction: column;
+
     /* visuals */
     background-color: #3a2a61;
     color: #A595B7;
     box-shadow: 0 0 80px 70px #A595B7, /* inner */
-    0 0 120px 80px #0ff; /* outer */
+                0 0 120px 80px #0ff; /* outer */
 }
 
 p {
@@ -76,7 +73,7 @@ h2 {
 
 h3 {
     font-size: 28px;
-    margin-bottom: -5px;
+    margin-bottom: 5px;
 }
 
 h4 {
@@ -88,7 +85,6 @@ h4 {
 .section-heading {
     /* visuals */
     background: linear-gradient(to right, rgba(255, 255, 255, 0), #20cfcf, #b694dc, rgba(255, 255, 255, 0));
-    /*background: -webkit-linear-gradient(#20cfcf, #b694dc);*/
     color: #3a2a61;
     text-align: center;
 }
@@ -136,8 +132,9 @@ footer {
     padding: 5px;
     padding-bottom: 10px;
 
+    /* so that footer connects to bottom of section */
     margin-top: auto;
-    /*margin-top: 25px;*/
+
     /* visuals */
     background-color: #599bae;
     color: #BEE0EA;
@@ -158,31 +155,37 @@ footer {
         transform: scale(1.25); /* Scale up to 1.25 times the original size */
     }
 
-
 .column {
     flex: 1; /* Each column takes up equal space */
 }
 
-.skill-heading {
-    padding-bottom: 10px;
-    text-decoration: underline;
-}
 
-.skill {
+
+.skill-col-container {
     display: flex;
-    align-items: center; /* Center vertically */
-    margin-block-start: 5px;
+    padding-left: 25%;
 }
 
-.skill-img {
-    margin-right: 5px; /* Adjust spacing between image and text */
-    margin-left: 20px; /* Adjust indent */
-}
+    .skill-heading {
+        padding-bottom: 10px;
+        text-decoration: underline;
+    }
 
-.skill-text {
-    margin-block: 0px;
-}
+    .skill {
+        display: flex;
+        align-items: center; /* Center vertically */
+        margin-block-start: 5px;
+    }
 
+    .skill-img {
+        margin-right: 5px; /* Adjust spacing between image and text */
+        margin-left: 20px; /* Adjust indent */
+        width: 30px;
+    }
+
+        .skill-text {
+            margin-block: 0px;
+        }
 
 
 
@@ -249,6 +252,7 @@ footer {
     column-gap: 20px;
     row-gap: 40px;
     max-width: 800px;
+    padding-top: 20px;
 }
 
 .card {
@@ -261,29 +265,27 @@ footer {
     color: #551a8b;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
-
-.card-clickable:hover {
-    /* visuals */
-    box-shadow: 0 16px 24px 0 rgba(0,0,0,0.5);
-}
-
-.card-img {
-    border-radius: 5px 5px 0 0;
-}
-
-.card-container {
-    padding: 10px 20px;
-}
-
-    .card-container p {
-        margin-left: 0%;
-        margin-right: 0%;
+    .card-img {
+        border-radius: 5px 5px 0 0;
     }
 
-.card-info {
-    /* visuals */
-    color: #7d6b8c;
-}
+    .card-container {
+        padding: 10px 20px;
+    }
+
+        .card-container p {
+            margin-left: 0%;
+            margin-right: 0%;
+        }
+
+    .card-info {
+        /* visuals */
+        color: #7d6b8c;
+    }
+    .card-clickable:hover {
+        /* visuals */
+        box-shadow: 0 16px 24px 0 rgba(0,0,0,0.5);
+    }
 
 .gameplay {
     padding-top: 20px;
@@ -292,58 +294,94 @@ footer {
     max-width: 1000px;
 }
 
-.gameplay-card {
-    display: flex;
-    border-radius: 5px;
-    text-align: left;
-    /* visuals */
-    background-color: #A595B7;
-    color: #551a8b;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
+    .gameplay-card {
+        display: flex;
+        flex-direction: row; /* Stack items horizontally */
+        border-radius: 5px;
+        text-align: left;
+        /* visuals */
+        background-color: #A595B7;
+        color: #551a8b;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
 
-.gameplay-img {
-    border-radius: 5px 0 0 5px;
-}
+    .gameplay-img {
+        border-radius: 5px 0 0 5px;
+    }
 
-.gameplay-text {
-    padding: 15px;
-}
-
-.img-bg {
-    border-radius: 5px 0 0 5px;
-}
+    .gameplay-text {
+        padding: 15px;
+    }
 
 
-.description-container {
-    display: flex;
-    flex-direction: row; /* Stack items horizontally */
-}
 
-.description-img {
-    min-width: 200px;
-    flex: 1;
-}
-
+/* the main text of the About Me page */
 .description {
     padding-left: 2%;
     padding-right: 2%;
     flex: 2.5;
 }
 
-/* Apply styles when screen width is less than or equal to given value */
-@media screen and (max-width: 768px) {
     .description-container {
-        flex-direction: column; /* Stack items vertically */
+        display: flex;
+        flex-direction: row; /* Stack items horizontally */
+        padding-top: 20px;
     }
 
     .description-img {
-        min-width: auto; /* Remove minimum width */
+        min-width: 200px;
+        flex: 1;
+    }
+
+/* the main text of the Skills and Portfolio pages */
+.summary {
+    margin: 0 auto; /* Center horizontally */
+    max-width: 1000px;
+    padding-block: 10px;
+}
+
+
+
+/* Apply styles when screen width is less than or equal to given value */
+@media screen and (max-width: 768px) {
+    .skill-col-container {
+        padding-left: 0%;
+    }
+
+        .skill-column {
+            padding-left: 10%;
+        }
+    
+    .games-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card {
         max-width: 350px;
         margin: 0 auto; /* Center horizontally */
     }
 
-    .description {
-        flex: 1; /* Take remaining space */
+    .gameplay-card {
+        flex-direction: column; /* Stack items vertically */
+        max-width: 350px;
+        margin: 0 auto; /* Center horizontally */
     }
+
+    .gameplay-img {
+        border-radius: 5px 5px 0 0;
+    }
+
+    .description-container {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+        .description-img {
+            min-width: auto; /* Remove minimum width */
+            max-width: 350px;
+            margin: 0 auto; /* Center horizontally */
+        }
+
+        .description {
+            flex: 1; /* Take remaining space */
+        }
 }
