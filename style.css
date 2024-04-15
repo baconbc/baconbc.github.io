@@ -1,17 +1,34 @@
+:root {
+    --dark-purple: #302558;
+    --main-purple: #3a2a61;
+    --purple: #523c78;
+    --light-purple: #A595B7;
+    --off-purple: #551a8b;
+    --hover-purple: #755f99;
+    
+    --dark-aqua: #397F93;
+    --aqua: #599bae;
+    --light-aqua: #BEE0EA;
+    --hover-aqua: #408ca1;
+
+    --cyan: #0ff;
+    --cyan-gradient: #b694dc;
+}
+
 body {
     font-size: 20px;
-    font-family: Helvetica, sans-serif;
+    font-family: Comfortaa, Manjari, Helvetica, sans-serif;
     margin: 0%;
     /* visuals */
-    background-color: #302558;
-    color: #A595B7;
+    background-color: var(--dark-purple);
+    color: var(--light-purple);
 }
 
 .my-name {
     font-family: 'Lucida Handwriting';
     text-align: center;
     /* visuals */
-    background: repeating-linear-gradient(to bottom, #0ff 0, #A595B7 70px, #b694dc 110px);
+    background: repeating-linear-gradient(to bottom, var(--cyan) 0, var(--light-purple) 70px, var(--cyan-gradient) 110px);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -25,17 +42,15 @@ section {
     margin: auto;
     margin-top: -2px;
     text-align: left;
-
     /* make it so that section extends to 85% of the visible screen so that it reaches the bottom */
     min-height: 85vh;
     display: flex;
     flex-direction: column;
-
     /* visuals */
-    background-color: #3a2a61;
-    color: #A595B7;
-    box-shadow: 0 0 80px 70px #A595B7, /* inner */
-                0 0 120px 80px #0ff; /* outer */
+    background-color: var(--main-purple);
+    color: var(--light-purple);
+    box-shadow: 0 0 80px 70px var(--light-purple), /* inner */
+    0 0 120px 80px var(--cyan); /* outer */
 }
 
 p {
@@ -60,7 +75,6 @@ a {
 hr {
     border-style: solid;
     margin-block: 0;
-    margin-bottom: 10px;
 }
 
 h1 {
@@ -72,7 +86,7 @@ h1 {
 
 h2 {
     font-size: 40px;
-    margin-bottom: 15px;
+    margin-bottom: 22px;
 }
 
 h3 {
@@ -93,8 +107,8 @@ h5 {
 
 .section-heading {
     /* visuals */
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), #20cfcf, #b694dc, rgba(255, 255, 255, 0));
-    color: #3a2a61;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #20cfcf, var(--cyan-gradient), rgba(255, 255, 255, 0));
+    color: var(--main-purple);
     text-align: center;
 }
 
@@ -107,8 +121,8 @@ h5 {
     list-style-type: none;
     overflow: hidden;
     /* visuals */
-    background-color: #599bae;
-    border-bottom: 5px solid #397F93;
+    background-color: var(--aqua);
+    border-bottom: 5px solid var(--dark-aqua);
 }
 
 .nav-heading {
@@ -117,7 +131,7 @@ h5 {
     display: block;
     padding: 15px;
     /* visuals */
-    color: #BEE0EA;
+    color: var(--light-aqua);
 }
 
 .nav-tab {
@@ -126,12 +140,12 @@ h5 {
 
     .nav-tab a:hover {
         /* visuals */
-        background-color: #408ca1;
+        background-color: var(--hover-aqua);
     }
 
     .nav-tab a.current {
         /* visuals */
-        background-color: #397F93;
+        background-color: var(--dark-aqua);
     }
 
 /* used to account for scrollbar at the top when jumping to a section using the navbar */
@@ -144,21 +158,19 @@ footer {
     text-align: center;
     padding: 5px;
     padding-bottom: 10px;
-
     /* so that footer connects to bottom of section */
     margin-top: auto;
-
     /* visuals */
-    background-color: #599bae;
-    color: #BEE0EA;
-    border-top: 5px solid #397F93;
+    background-color: var(--aqua);
+    color: var(--light-aqua);
+    border-top: 5px solid var(--dark-aqua);
 }
 
 .icon {
     font-size: 32px;
     padding-left: 5px;
     padding-right: 5px;
-    color: #BEE0EA;
+    color: var(--light-aqua);
     display: inline-block; /* Ensure icons are displayed inline */
     position: relative; /* Enable positioning */
     transition: transform 0.3s; /* Add transition for smooth scaling */
@@ -208,11 +220,11 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #A595B7;
+    border: 1px solid var(--light-purple);
     border-bottom: none;
     /* visuals */
-    background-color: #A595B7;
-    color: #3a2a61;
+    background-color: var(--light-purple);
+    color: var(--main-purple);
 }
 
     /* Style the buttons inside the tab */
@@ -232,15 +244,19 @@ footer {
         /* Change background color of buttons on hover */
         .tab button:hover {
             /* visuals */
-            background-color: #755f99; /*#d1c8db;*/
+            background-color: var(--hover-purple);
         }
 
         /* Create an active/current tablink class */
         .tab button.active {
             /* visuals */
-            background-color: #523c78; /*#c0b0d1;*/
-            color: #A595B7;
+            background-color: var(--purple);
+            color: var(--light-purple);
         }
+
+ .tablinks {
+     font-family: inherit;
+ }
 
 /* Style the tab content */
 .tabcontent {
@@ -251,9 +267,9 @@ footer {
     padding-bottom: 15px;
     flex-direction: column;
     /* visuals */
-    border: 3px solid #A595B7;
+    border: 3px solid var(--light-purple);
     border-top: none;
-    background-color: #523c78;
+    background-color: var(--purple);
 }
 
 
@@ -274,8 +290,8 @@ footer {
     border-radius: 5px;
     text-align: left;
     /* visuals */
-    background-color: #A595B7;
-    color: #551a8b;
+    background-color: var(--light-purple);
+    color: var(--off-purple);
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
     .card-img {
@@ -313,8 +329,8 @@ footer {
         border-radius: 5px;
         text-align: left;
         /* visuals */
-        background-color: #A595B7;
-        color: #551a8b;
+        background-color: var(--light-purple);
+        color: var(--off-purple);
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     }
 
@@ -360,56 +376,53 @@ footer {
 }
 
 .experience {
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
+.education {
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+}
 
+.education-col-gap {
+    margin-left: 10%;
+}
 
-/* Apply styles when screen width is less than or equal to given value */
-@media screen and (max-width: 768px) {
-    .skill-col-container {
-        padding-left: 0%;
+@media screen and (max-width: 1700px) {
+    section {
+        box-shadow: 0 0 40px 30px var(--light-purple), /* inner */
+        0 0 60px 40px var(--cyan); /* outer */
     }
+}
 
-        .skill-column {
-            padding-left: 10%;
-        }
-    
-    .games-grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .card {
-        max-width: 350px;
-        margin: 0 auto; /* Center horizontally */
-    }
-
-    .gameplay-card {
-        flex-direction: column; /* Stack items vertically */
-        max-width: 350px;
-        margin: 0 auto; /* Center horizontally */
-    }
-
-    .gameplay-img {
-        border-radius: 5px 5px 0 0;
+@media screen and (max-width: 1200px) {
+    section {
+        box-shadow: 0 0 20px 17px var(--light-purple), /* inner */
+        0 0 40px 25px var(--cyan); /* outer */
     }
 
     .description-container {
         flex-direction: column; /* Stack items vertically */
     }
 
-        .description-img {
-            min-width: auto; /* Remove minimum width */
-            max-width: 350px;
-            margin: 0 auto; /* Center horizontally */
-        }
+    .description-img {
+        min-width: auto; /* Remove minimum width */
+        max-width: 350px;
+        margin: 0 auto; /* Center horizontally */
+    }
 
-        .description {
-            flex: 1; /* Take remaining space */
-        }
+    .description {
+        flex: 1; /* Take remaining space */
+    }
 
     .experience {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .education {
         margin-left: 0;
         margin-right: 0;
     }
@@ -420,5 +433,50 @@ footer {
 
     .italic-heading {
         font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .gameplay-card {
+        flex-direction: column; /* Stack items vertically */
+        max-width: 500px;
+        margin: 0 auto; /* Center horizontally */
+    }
+
+    .gameplay-img {
+        border-radius: 5px 5px 0 0;
+    }
+}
+
+/* Apply styles when screen width is less than or equal to given value */
+@media screen and (max-width: 768px) {
+    section {
+        box-shadow: 0 0 20px 15px var(--light-purple), /* inner */
+        0 0 30px 20px var(--cyan); /* outer */
+    }
+
+    .skill-col-container {
+        padding-left: 0%;
+    }
+
+    .skill-column {
+        padding-left: 10%;
+    }
+
+    .games-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card {
+        max-width: 350px;
+        margin: 0 auto; /* Center horizontally */
+    }
+
+    .education {
+        flex-direction: column;
+    }
+
+    .education-col-gap {
+        margin-left: 0;
     }
 }
