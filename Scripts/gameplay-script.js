@@ -31,7 +31,7 @@ createGameplay('uiux-container', "Assets/WeaponCooldown.gif", "Weapon Hotbar", "
     "The weapon hotbar highlights the currently selected weapon and displays each weapon's cooldown status and number key. After using a weapon, its hotbar slot grays out to indicate the start of a cooldown, then slowly returns to its normal color as the cooldown elapses.");
 
 createGameplay('uiux-container', "Assets/DamageIndicators.gif", "Damage Effects", "Damage Effects", "UI-UY?", "https://baconbc.itch.io/ui-uy",
-    "a damage display with color-coded feedback");
+    "Whenever an enemy or the player takes damage, numbers appear indicating the amount of damage taken. The damage numbers have color-coded feedback and an icon to indicate the effectiveness of the attack.");
 
 createGameplay('uiux-container', "Assets/CraftingMechanic.gif", "Inventory and Crafting System", "Inventory and Crafting System", "AcornQuest", "https://madjuse.itch.io/spring-scaffold-2022",
     "Whenever the player picks up an acorn, it adds an item to the inventory. In the inventory, the player can combine items to craft a new item if a valid item combination is used. The player can test out item combinations on their own, or open up the recipe book in order to see all the valid item combinations.");
