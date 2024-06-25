@@ -71,13 +71,29 @@ a {
     text-decoration: none;
 }
 
+    a:link {
+        color: inherit
+    }
+
+    a:active {
+        color: inherit
+    }
+
+    a:visited {
+        color: inherit
+    }
+
+    a:hover {
+        color: inherit
+    }
+
 .aqua-link {
     color: var(--aqua);
     text-decoration: underline;
 }
 
 .dark-aqua-link {
-    color: var(--dark-aqua);
+    color: var(--dark-aqua) !important;
     text-decoration: underline;
 }
 
@@ -140,7 +156,7 @@ h5 {
     display: block;
     padding: 15px;
     /* visuals */
-    color: var(--light-aqua);
+    color: var(--light-aqua) !important;
 }
 
 .nav-tab {
