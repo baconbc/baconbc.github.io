@@ -71,19 +71,7 @@ a {
     text-decoration: none;
 }
 
-    a:link {
-        color: inherit
-    }
-
-    a:active {
-        color: inherit
-    }
-
-    a:visited {
-        color: inherit
-    }
-
-    a:hover {
+    a:link, a:visited, a:focus, a:hover, a:active {
         color: inherit
     }
 
