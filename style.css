@@ -76,7 +76,7 @@ a {
     }
 
 .aqua-link {
-    color: var(--aqua);
+    color: var(--aqua) !important;
     text-decoration: underline;
 }
 
