@@ -26,6 +26,9 @@ function createCard(title, imgURL, imgAlt, link, year, info, description) {
 createCard("CraftAway", "Assets/CraftAway.png", "CraftAway video game", "https://jalagon.itch.io/craftaway", "2024", "Unity | Programmer | UI/UX | Pixel Artist",
     "CraftAway is a 2D sandbox survival-craft game where players explore a new world and try to survive through gathering resources, crafting items and tools, building a shelter, and fighting enemies.");
 
+createCard("UI-UY?", "Assets/UI-UY.png", "UI-UY? video game", "https://baconbc.itch.io/ui-uy", "2024", "Unity | Team Lead | Programmer | UI/UX | Pixel Artist",
+    "UI-UY? is a 2D adventure game where the player can unlock important UI elements and menus over time to demonstrate the importance of having a good user interface.");
+
 createCard("AcornQuest", "Assets/AcornQuest.png", "AcornQuest video game", "https://madjuse.itch.io/spring-scaffold-2022", "2022", "Unity | Team Lead | Programmer | UI/UX",
     "AcornQuest is a 2D platformer game where players try to complete levels through solving puzzles, collecting materials to craft items, and completing jumping challenges, all while evading enemies!");
 
