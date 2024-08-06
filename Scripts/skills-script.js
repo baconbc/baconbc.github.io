@@ -18,6 +18,7 @@ function createSkill(ID, imgURL, name) {
 
 // Engines
 createSkill("skills-engines", "Logos/Unity.png", "Unity");
+createSkill("skills-engines", "Logos/Unreal.png", "Unreal");
 createSkill("skills-engines", "Logos/Godot.png", "Godot");
 
 // Languages
