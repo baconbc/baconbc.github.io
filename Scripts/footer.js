@@ -13,6 +13,9 @@ const footer=`
     <a target="_blank" href="https://www.linkedin.com/in/brooke-cravotta-5120522ab/" class="icon">
         <i class="fa-brands fa-linkedin"></i>
     </a>
+    <a target="_blank" href="https://www.instagram.com/tabbytwinztech/" class="icon">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
 `;
 
 window.addEventListener('DOMContentLoaded', () => {
