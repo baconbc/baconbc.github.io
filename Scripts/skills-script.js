@@ -33,6 +33,7 @@ createSkill("skills-languages", "Logos/Angular.png", "Angular");
 
 // Software
 createSkill("skills-software", "Logos/Git.png", "Git");
+createSkill("skills-software", "Logos/Jira.png", "Jira");
 createSkill("skills-software", "Logos/Aseprite.png", "Aseprite");
 createSkill("skills-software", "Logos/Blender.png", "Blender");
 createSkill("skills-software", "Logos/Figma.png", "Figma");
